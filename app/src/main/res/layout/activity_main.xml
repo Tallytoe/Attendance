@@ -44,7 +44,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -52,7 +52,7 @@
         android:text="login" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/btnReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button"

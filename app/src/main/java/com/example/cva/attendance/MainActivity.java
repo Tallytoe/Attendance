@@ -1,17 +1,15 @@
 package com.example.cva.attendance;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button log, reg;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    private Button btnLogin, btnReg;
     private EditText etEmail, etPass;
     private DbHelper db;
     private Session session;
@@ -22,26 +20,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         db = new DbHelper(this);
         session = new Session(this);
-        log = (Button)findViewById(R.id.login);
-        reg = (Button)findViewById(R.id.register);
+        btnLogin = (Button)findViewById(R.id.btnLogin);
+        btnReg = (Button)findViewById(R.id.btnReg);
         etEmail = (EditText)findViewById(R.id.etEmail);
         etPass = (EditText)findViewById(R.id.etPass);
-        log.setOnClickListener(this);
-        reg.setOnClickListener(this);
+        btnLogin.setOnClickListener(this);
+        btnReg.setOnClickListener(this);
 
         if(session.loggedin()){
-            startActivity(new Intent(MainActivity.this,MainActivity.class));
+            startActivity(new Intent(MainActivity.this,Main2Activity.class));
             finish();
         }
     }
 
-
+    @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.login:
+            case R.id.btnLogin:
                 login();
                 break;
-            case R.id.register:
+            case R.id.btnReg:
                 startActivity(new Intent(MainActivity.this,RegisterActivity.class));
                 break;
             default:
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(db.getUser(email,pass)){
             session.setLoggedin(true);
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
+            startActivity(new Intent(MainActivity.this, Main2Activity.class));
             finish();
         }else{
             Toast.makeText(getApplicationContext(), "Wrong email/password",Toast.LENGTH_SHORT).show();
