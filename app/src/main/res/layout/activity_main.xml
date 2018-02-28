@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/login1"
     android:orientation="vertical"
+    android:paddingTop="56dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
 
-    tools:context="com.example.cva.attendance.MainActivity">
-
-    <TextView
+        <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,18 +20,18 @@
         android:text="Attendance"
         android:textColor="@color/white"
         android:textSize="30sp" />
-
-    <EditText
+        <EditText
         android:id="@+id/etEmail"
-        android:layout_width="423dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editText2"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="22dp"
-        android:hint="USERNAME"
         android:ems="10"
+        android:hint="USERNAME"
         android:inputType="textPersonName"
         android:text="" />
+
 
     <EditText
         android:id="@+id/etPass"
@@ -39,8 +40,8 @@
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
         android:layout_centerVertical="true"
-        android:hint="PASSWORD"
         android:ems="10"
+        android:hint="PASSWORD"
         android:inputType="textPassword" />
 
     <Button
