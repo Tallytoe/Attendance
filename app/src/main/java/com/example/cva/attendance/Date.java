@@ -37,7 +37,7 @@ private Button next;
             displayToast("No date selected");
         }else{
             Intent intent = new Intent(Date.this,Rollno.class);
-            intent.putExtra("date",date);
+            intent.putExtra("dat",date);
             startActivity(intent);
             finish();
         }

@@ -19,7 +19,8 @@
         <activity android:name=".Main2Activity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Date" />
-        <activity android:name=".Rollno"></activity>
+        <activity android:name=".Rollno" />
+        <activity android:name=".substud"></activity>
     </application>
 
 </manifest>
