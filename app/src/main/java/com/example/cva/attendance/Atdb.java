@@ -11,9 +11,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class Atdb  extends SQLiteOpenHelper  {
+    public static final String TAG = Atdb.class.getSimpleName();
     public static final String DB_NAME = "1A.db";
     public static final int DB_VERSION = 1;
-    String value =substud.all ;
+    public String value =substud.all ;
     public String STUD_TABLE = value;
     public static final String COLUMN_DATE= "date";
     public static final String COLUMN_ID = "roll";
@@ -39,6 +40,7 @@ public class Atdb  extends SQLiteOpenHelper  {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + STUD_TABLE);
         onCreate(db);
+        db.close();
     }
 
 }

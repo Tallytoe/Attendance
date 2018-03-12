@@ -1,5 +1,6 @@
 package com.example.cva.attendance;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
     private Button upsub;
     private EditText subname;
     private EditText subname2;
+    private Atdb db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
         delsub.setOnClickListener(this);
         upsub.setOnClickListener(this);
 
+
+
     }
 
 
@@ -33,6 +37,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
         switch(v.getId()){
             case R.id.button1:
                 adddb();
+                SQLiteDatabase db= new Atdb(this).getWritableDatabase();
                 break;
             case R.id.button3:
                 deldb();
@@ -45,13 +50,16 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
     }
     public static String all="" ;
     public static String all2="";
-    public void adddb(){
+    public String adddb(){
         String dbname1 = subname.getText().toString();
         all=dbname1;
-    }
-    public void deldb(){
+        return all;
+
+            }
+    public String deldb(){
         String dbname1=subname.getText().toString();
         all=dbname1;
+        return all;
     }
     public void updb()
     {

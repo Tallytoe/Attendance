@@ -1,85 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/login1"
-    tools:context="com.example.cva.attendance.substud"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="56dp"
-    android:paddingLeft="24dp"
-    android:paddingRight="24dp">
+    android:background="@drawable/app3"
+    tools:context="com.example.cva.attendance.substud">
 
-        <TextView
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="20dp"
         android:text="EDIT ATTENDENCE"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:visibility="visible" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="85dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/etdbname"
+            android:layout_marginTop="54dp"
             android:text="ADD SUBJECT" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/button2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="36dp"
+            android:layout_marginBottom="24dp"
             android:text="DELETE SUBJECT" />
+
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/etdbname2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="21dp"
+            android:layout_marginBottom="11dp"
             android:text="UPDATE SUBJECT" />
 
         <EditText
             android:id="@+id/etdbname"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="SUBJECT" />
+            android:text="ENTER SUBJECT" />
 
         <EditText
+            android:id="@+id/etdbname2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="134dp"
             android:ems="10"
-            android:id="@+id/etdbname2"
             android:inputType="textPersonName"
             android:text="NEW SUBJECT" />
 
+
+
     </RelativeLayout>
 
-
-
-    </LinearLayout>
-
+</LinearLayout>
