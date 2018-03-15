@@ -7,66 +7,120 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
+
 public class substud extends AppCompatActivity implements View.OnClickListener {
-    private Button adsub;
-    private Button delsub;
-    private Button upsub;
+    private Button adsub1;
+    private Button adsub2;
+    private Button adsub3;
+    private Button adsub4;
+    private Button adsub5;
+    private Button adsub6;
     private EditText subname;
-    private EditText subname2;
     private Atdb db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_substud);
-        adsub = (Button)findViewById(R.id.button1);
-        delsub = (Button)findViewById(R.id.button3);
-        upsub = (Button)findViewById(R.id.button2);
+        adsub1 = (Button)findViewById(R.id.button1);
+        adsub2 = (Button)findViewById(R.id.button2);
+        adsub3 = (Button)findViewById(R.id.button3);
+        adsub4 = (Button)findViewById(R.id.button4);
+        adsub5 = (Button)findViewById(R.id.button5);
+        adsub6 = (Button)findViewById(R.id.button6);
         subname=(EditText)findViewById(R.id.etdbname);
-        subname2=(EditText)findViewById(R.id.etdbname2);
-        adsub.setOnClickListener(this);
-        delsub.setOnClickListener(this);
-        upsub.setOnClickListener(this);
-
-
+        adsub1.setOnClickListener(this);
+        adsub2.setOnClickListener(this);
+        adsub3.setOnClickListener(this);
+        adsub4.setOnClickListener(this);
+        adsub5.setOnClickListener(this);
+        adsub6.setOnClickListener(this);
 
     }
-
 
     public void onClick(View v){
         switch(v.getId()){
             case R.id.button1:
-                adddb();
-                SQLiteDatabase db= new Atdb(this).getWritableDatabase();
-                break;
-            case R.id.button3:
-                deldb();
+                adddb1();
+
                 break;
             case R.id.button2:
-                updb();
+                adddb2();
                 break;
+            case R.id.button3:
+                adddb3();
+
+            break;
+            case R.id.button4:
+                adddb4();
+
+                break;
+            case R.id.button5:
+                adddb5();
+
+                break;
+            case R.id.button6:
+                adddb6();
+                SQLiteDatabase db6= new Atdb(this).getWritableDatabase();
+                break;
+
             default:
         }
     }
-    public static String all="" ;
-    public static String all2="";
-    public String adddb(){
+    public static String all1="" ;
+    public static String all2="" ;
+    public static String all3="" ;
+    public static String all4="" ;
+    public static String all5="" ;
+    public static String all6="" ;
+    public String adddb1(){
+
         String dbname1 = subname.getText().toString();
-        all=dbname1;
-        return all;
+        all1=dbname1;
+        return all1;
 
             }
-    public String deldb(){
-        String dbname1=subname.getText().toString();
-        all=dbname1;
-        return all;
-    }
-    public void updb()
-    {
-        String dbname1=subname.getText().toString();
-        String dbname2=subname2.getText().toString();
-        all=dbname1;
-        all2=dbname2;
+    public String adddb2(){
+
+        String dbname1 = subname.getText().toString();
+        all2=dbname1;
+        return all2;
 
     }
+
+    public String adddb3(){
+
+        String dbname1 = subname.getText().toString();
+        all3=dbname1;
+        return all3;
+
+    }
+
+    public String adddb4(){
+
+        String dbname1 = subname.getText().toString();
+        all4=dbname1;
+        return all4;
+
+    }
+
+    public String adddb5(){
+
+        String dbname1 = subname.getText().toString();
+        all5=dbname1;
+        return all5;
+
+    }
+
+    public String adddb6(){
+
+        String dbname1 = subname.getText().toString();
+        all6=dbname1;
+        return all6;
+
+    }
+
+
 }
