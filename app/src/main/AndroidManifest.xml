@@ -22,9 +22,8 @@
         <activity android:name=".Rollno" />
         <activity android:name=".substud" />
         <activity android:name=".Main3Activity" />
-        <activity android:name=".attendence" />
-        <activity android:name=".Main4Activity" />
-        <activity android:name=".Attendance"></activity>
+        <activity android:name=".AttMain" />
+        <activity android:name=".Stud"></activity>
     </application>
 
 </manifest>

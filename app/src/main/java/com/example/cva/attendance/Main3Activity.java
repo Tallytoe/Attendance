@@ -15,16 +15,34 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         ImageButton imgb;
+        ImageButton imgb2;
 
         imgb = (ImageButton) findViewById(R.id.imageButton8);
+        imgb2 = (ImageButton) findViewById(R.id.imageButton3);
+        ImageButton imgb3 = (ImageButton) findViewById(R.id.imageButton4);
+
         imgb.setOnClickListener(this);
+        imgb2.setOnClickListener(this);
+        imgb3.setOnClickListener(this);
+
     }
 
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.imageButton8:
+                startActivity(new Intent(Main3Activity.this, substud.class));
 
-        startActivity(new Intent(Main3Activity.this, substud.class));
+                break;
+            case R.id.imageButton3:
+                startActivity(new Intent(Main3Activity.this, AttMain.class));
+                break;
+            case R.id.imageButton4:
+                startActivity(new Intent(Main3Activity.this, Stud.class));
+                break;
 
+            default:
+
+        }
     }
-
 }
 

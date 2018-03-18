@@ -5,10 +5,13 @@ package com.example.cva.attendance;
  */
 import android.content.Context;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Atdb  extends SQLiteOpenHelper  {
@@ -106,5 +109,18 @@ public class Atdb  extends SQLiteOpenHelper  {
         onCreate(db);
         db.close();
     }
+
+    public Cursor getAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // query to obtain the names of all tables in your database
+        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
+
+
+       return c;
+
+
+
+        }
 
 }
