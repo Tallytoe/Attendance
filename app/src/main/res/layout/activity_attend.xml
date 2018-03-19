@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.cva.attendance.Attendance"
+    android:id="@+id/item_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@drawable/login1"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ATTENDANCE"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btncc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:visibility="invisible"/>
+
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:visibility="invisible"/>
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:visibility="invisible"/>
+    <CheckBox
+        android:id="@+id/cb4"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:visibility="invisible"/>
+
+
+
+
+</LinearLayout>

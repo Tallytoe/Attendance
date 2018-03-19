@@ -59,7 +59,7 @@ public class Studdb extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // query to obtain the names of all tables in your database
-        Cursor c = db.rawQuery("SELECT MARKS FROM TABLE_NAME", null);
+        Cursor c = db.rawQuery("SELECT MARKS FROM student_table", null);
 
 
         return c;

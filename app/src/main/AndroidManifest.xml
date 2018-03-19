@@ -23,7 +23,9 @@
         <activity android:name=".substud" />
         <activity android:name=".Main3Activity" />
         <activity android:name=".AttMain" />
-        <activity android:name=".Stud"></activity>
+        <activity android:name=".Stud"/>
+            <activity android:name=".Attendance">
+        </activity>
     </application>
 
 </manifest>

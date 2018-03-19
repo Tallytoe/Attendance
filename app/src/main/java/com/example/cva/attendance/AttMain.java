@@ -70,13 +70,13 @@ public class AttMain extends AppCompatActivity implements View.OnClickListener{
         if (v.getId() == R.id.button1) {
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
-            Intent intent = new Intent(AttMain.this,Rollno.class);
-            intent.putExtra("dat",myary[1]);
+            Intent intent = new Intent(AttMain.this,Attendance.class);
+            intent.putExtra("datt",myary[1]);
             startActivity(intent);
         } else if (v.getId() == R.id.button2) {
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
-            Intent intent = new Intent(AttMain.this,Rollno.class);
+            Intent intent = new Intent(AttMain.this,Attendance.class);
             intent.putExtra("dat",myary[2]);
             startActivity(intent);
         } else if (v.getId() == R.id.button3){
