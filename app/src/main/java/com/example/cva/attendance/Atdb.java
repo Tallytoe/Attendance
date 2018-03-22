@@ -55,28 +55,28 @@ public class Atdb  extends SQLiteOpenHelper  {
     public static final String COLUMN_STAT6 = "status";
 
     public final String CREATE_TABLE_STUD1 = "CREATE TABLE " + STUD_TABLE1 + "("
-            + COLUMN_DATE1 + " TEXT,"
-            + COLUMN_ID1 + " INTEGER PRIMARY KEY,"
+            + COLUMN_DATE1 + "TEXT,"
+            + COLUMN_ID1 + " TEXT,"
             + COLUMN_STAT1 + " TEXT);";
     public final String CREATE_TABLE_STUD2 = "CREATE TABLE " + STUD_TABLE2 + "("
-            + COLUMN_DATE2 + " TEXT,"
-            + COLUMN_ID2 + " INTEGER PRIMARY KEY,"
+            + COLUMN_DATE2 + "TEXT,"
+            + COLUMN_ID2 + " TEXT,"
             + COLUMN_STAT2 + " TEXT);";
     public final String CREATE_TABLE_STUD3 = "CREATE TABLE " + STUD_TABLE3 + "("
             + COLUMN_DATE3 + " TEXT,"
-            + COLUMN_ID3 + " INTEGER PRIMARY KEY,"
+            + COLUMN_ID3 + " TEXT,"
             + COLUMN_STAT3 + " TEXT);";
     public final String CREATE_TABLE_STUD4 = "CREATE TABLE " + STUD_TABLE4 + "("
             + COLUMN_DATE4 + " TEXT,"
-            + COLUMN_ID4 + " INTEGER PRIMARY KEY,"
+            + COLUMN_ID4 + " TEXT,"
             + COLUMN_STAT4 + " TEXT);";
     public final String CREATE_TABLE_STUD5 = "CREATE TABLE " + STUD_TABLE5 + "("
             + COLUMN_DATE5 + " TEXT,"
-            + COLUMN_ID5 + " INTEGER PRIMARY KEY,"
+            + COLUMN_ID5 + " TEXT,"
             + COLUMN_STAT5 + " TEXT);";
     public final String CREATE_TABLE_STUD6 = "CREATE TABLE " + STUD_TABLE6 + "("
             + COLUMN_DATE6 + " TEXT,"
-            + COLUMN_ID6 + " INTEGER PRIMARY KEY,"
+            + COLUMN_ID6 + " TEXT,"
             + COLUMN_STAT6 + " TEXT);";
 
 

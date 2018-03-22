@@ -77,34 +77,34 @@ public class AttMain extends AppCompatActivity implements View.OnClickListener{
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
             Intent intent = new Intent(AttMain.this,Attendance.class);
-            intent.putExtra("dat",myary[2]);
+            intent.putExtra("datt",myary[2]);
             startActivity(intent);
         } else if (v.getId() == R.id.button3){
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
-            Intent intent = new Intent(AttMain.this,Rollno.class);
-            intent.putExtra("dat",myary[3]);
+            Intent intent = new Intent(AttMain.this,Attendance.class);
+            intent.putExtra("datt",myary[3]);
             startActivity(intent);
         }
         else if (v.getId() == R.id.button4){
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
-            Intent intent = new Intent(AttMain.this,Rollno.class);
-            intent.putExtra("dat",myary[4]);
+            Intent intent = new Intent(AttMain.this,Attendance.class);
+            intent.putExtra("datt",myary[4]);
             startActivity(intent);
         }
         else if (v.getId() == R.id.button5){
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
-            Intent intent = new Intent(AttMain.this,Rollno.class);
-            intent.putExtra("dat",myary[5]);
+            Intent intent = new Intent(AttMain.this,Attendance.class);
+            intent.putExtra("datt",myary[5]);
             startActivity(intent);
         }
         else if (v.getId() == R.id.button6){
             oh();
             String [] myary = oh().toArray(new String[oh().size()]);
-            Intent intent = new Intent(AttMain.this,Rollno.class);
-            intent.putExtra("dat",myary[6]);
+            Intent intent = new Intent(AttMain.this,Attendance.class);
+            intent.putExtra("datt",myary[6]);
             startActivity(intent);
         }
     }
