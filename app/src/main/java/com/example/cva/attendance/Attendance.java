@@ -9,9 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -21,14 +19,12 @@ public class Attendance extends AppCompatActivity {
     private Button btn;
     private Button btnpro;
     private Studdb dbd;
-    private Atdb myDb;
     private CheckBox checkBoxes[] = new CheckBox[15];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attend);
         dbd = new Studdb(this);
-        myDb=new Atdb(this);
         btn = (Button) findViewById(R.id.btncc);
         btnpro=(Button)findViewById(R.id.buttonp);
         checkBoxes[0] = (CheckBox) findViewById(R.id.cb1);
@@ -52,29 +48,35 @@ public class Attendance extends AppCompatActivity {
         viewAll();
 AddData();
     }
-    public void viewAll() {
+    public void viewAll()  {
         btn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ArrayList<String> arrTbblNames = new ArrayList<String>();
-                        Cursor c = dbd.getAllData();
-                        if (c.moveToFirst()) {
-                            while (!c.isAfterLast()) {
-                                arrTbblNames.add(c.getString(c.getColumnIndex("MARKS")));
-                                c.moveToNext();
-
-                            }
-                        }
-                        String [] myaryy = arrTbblNames.toArray(new String[arrTbblNames.size()]);
-                        for(int i=0;i<myaryy.length;i++){
+                        gett();
+                        String [] mya = gett().toArray(new String[gett().size()]);
+                        for(int i=0;i<mya.length;i++){
                             checkBoxes[i].setVisibility(View.VISIBLE);
 
-                            checkBoxes[i].setText(myaryy[i]);
+                            checkBoxes[i].setText(mya[i]);
 
                         }
                     }
                 });
+    }
+    public ArrayList<String> gett(){
+        ArrayList<String> arrTbblNames = new ArrayList<String>();
+        Cursor c = dbd.getAllData();
+        if (c.moveToFirst()) {
+            while (!c.isAfterLast()) {
+                arrTbblNames.add(c.getString(c.getColumnIndex("MARKS")));
+                c.moveToNext();
+
+
+            }
+        }
+
+        return arrTbblNames;
     }
     public  void AddData() {
         btnpro.setOnClickListener(
@@ -86,16 +88,8 @@ AddData();
                         db = openOrCreateDatabase("1A.db", Context.MODE_PRIVATE, null);
 
                         try {
-                            ArrayList<String> arrTbblNames = new ArrayList<String>();
-                            Cursor c = dbd.getAllData();
-                            if (c.moveToFirst()) {
-                                while (!c.isAfterLast()) {
-                                    arrTbblNames.add(c.getString(c.getColumnIndex("MARKS")));
-                                    c.moveToNext();
 
-                                }
-                            }
-                            String [] maa = arrTbblNames.toArray(new String[arrTbblNames.size()]);
+                            String [] maa = gett().toArray(new String[gett().size()]);
 
                             Date currentTime = Calendar.getInstance().getTime();
                             String Tablename = getIntent().getStringExtra("datt");
