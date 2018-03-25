@@ -5,7 +5,7 @@
     android:id="@+id/item_view"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login1"
+    android:background="@drawable/brick"
     android:gravity="center_vertical"
     android:orientation="vertical"
     android:paddingBottom="5dp"
@@ -41,113 +41,127 @@
 
     <CheckBox
         android:id="@+id/cb1"
-        android:layout_width="99dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1"
         android:visibility="invisible"
-        android:checked="true"/>
+        android:checked="true"
+        android:gravity="right|center_vertical"/>
 
     <CheckBox
         android:id="@+id/cb2"
-        android:layout_width="99dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="2"
         android:visibility="invisible"
-        android:checked="true"/>
+        android:checked="true"
+        android:gravity="right|center_vertical"/>
 
     <CheckBox
         android:id="@+id/cb3"
-        android:layout_width="99dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="3"
         android:visibility="invisible"
-        android:checked="true"/>
+        android:checked="true"
+        android:gravity="right|center_vertical"/>
     <CheckBox
         android:id="@+id/cb4"
-        android:layout_width="99dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="4"
         android:visibility="invisible"
-        android:checked="true"/>
+        android:checked="true"
+        android:gravity="right|center_vertical"/>
             <CheckBox
                 android:id="@+id/cb5"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb6"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="6"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb7"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="7"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb8"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="8"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb9"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="9"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb10"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="10"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb11"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="11"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb12"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="12"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb13"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="13"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
 
             <CheckBox
                 android:id="@+id/cb14"
-                android:layout_width="99dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="14"
                 android:visibility="invisible"
-                android:checked="true"/>
+                android:checked="true"
+                android:gravity="right|center_vertical"/>
             <Button
                 android:text="PROCEED"
                 android:layout_width="wrap_content"
