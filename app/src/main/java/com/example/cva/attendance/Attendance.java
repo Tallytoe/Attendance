@@ -26,6 +26,7 @@ public class Attendance extends AppCompatActivity {
         setContentView(R.layout.activity_attend);
         dbd = new Studdb(this);
         btn = (Button) findViewById(R.id.btncc);
+        Button btnExport=(Button)findViewById(R.id.btnexport);
         btnpro=(Button)findViewById(R.id.buttonp);
         checkBoxes[0] = (CheckBox) findViewById(R.id.cb1);
         checkBoxes[1] = (CheckBox) findViewById(R.id.cb2);
@@ -48,6 +49,7 @@ public class Attendance extends AppCompatActivity {
         viewAll();
 AddData();
     }
+
     public void viewAll()  {
         btn.setOnClickListener(
                 new View.OnClickListener() {

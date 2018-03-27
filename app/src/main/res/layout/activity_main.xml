@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/logi"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app1"
     android:orientation="vertical"
     android:paddingTop="56dp"
     android:paddingLeft="24dp"
@@ -31,24 +31,20 @@
         android:ems="10"
         android:hint="USERNAME"
         android:inputType="textPersonName"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:text="" />
 
 
     <EditText
         android:id="@+id/etPass"
         style="@style/Widget.AppCompat.EditText"
-        android:layout_width="match_parent"
+        android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
         android:layout_centerVertical="true"
         android:ems="10"
         android:hint="PASSWORD"
-        android:inputType="textPassword"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"/>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLogin"

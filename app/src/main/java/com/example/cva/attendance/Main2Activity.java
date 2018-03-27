@@ -9,8 +9,6 @@ import android.widget.Button;
 
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener {
     private Button btnLogout;
-    private Button btn1;
-    private Button btn2;
     private Button btn3;
     private Button btn4;
 
@@ -31,31 +29,23 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 logout();
             }
         });
-        btn1 = (Button) findViewById(R.id.button1);
-        btn2 = (Button) findViewById(R.id.button2);
+
         btn3 = (Button) findViewById(R.id.button3);
         btn4 = (Button) findViewById(R.id.button4);
-        btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
+
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
     }
 
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.button1:
-                    startActivity(new Intent(Main2Activity.this,Main3Activity.class));
-                    break;
-                case R.id.button2:
-                    Intent intent2=new Intent(Main2Activity.this,Main3Activity.class);
-                    startActivity(intent2);
-                    break;
+
                 case R.id.button3:
                     Intent intent3=new Intent(Main2Activity.this,Main3Activity.class);
                     startActivity(intent3);
                     break;
                 case R.id.button4:
-                    Intent intent4=new Intent(Main2Activity.this,Main3Activity.class);
+                    Intent intent4=new Intent(Main2Activity.this,exportsele.class);
                     startActivity(intent4);
                     break;
 
