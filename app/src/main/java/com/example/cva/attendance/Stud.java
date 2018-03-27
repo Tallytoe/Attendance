@@ -36,8 +36,11 @@ public class Stud extends AppCompatActivity implements View.OnClickListener {
 
         String Rollno =  editTextId.getText().toString();
         studdb.addUser(Rollno);
+        displayToast("STUDENT ADDED");
     }
-
+    private void displayToast(String message){
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
 
 
 

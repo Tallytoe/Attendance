@@ -4,18 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/brick"
     android:orientation="vertical"
     tools:context="com.example.cva.attendance.Export">
 
 
     <Button
         android:id="@+id/btnexport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="121dp"
-        android:text="EXPORT" />
+        android:text="EXPORT"
+        android:textColor="@color/white"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"/>
 
     <TextView
         android:id="@+id/info"
@@ -24,6 +31,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:text=""
         android:textSize="30dp" />
 </RelativeLayout>

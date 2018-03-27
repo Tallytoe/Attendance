@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 
 
 public class substud extends AppCompatActivity implements View.OnClickListener {
@@ -79,6 +79,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
 
         String dbname1 = subname.getText().toString();
         all1=dbname1;
+        displayToast("SUBJECT ADDED");
         return all1;
 
             }
@@ -86,6 +87,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
 
         String dbname1 = subname.getText().toString();
         all2=dbname1;
+        displayToast("SUBJECT ADDED");
         return all2;
 
     }
@@ -94,6 +96,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
 
         String dbname1 = subname.getText().toString();
         all3=dbname1;
+        displayToast("SUBJECT ADDED");
         return all3;
 
     }
@@ -102,6 +105,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
 
         String dbname1 = subname.getText().toString();
         all4=dbname1;
+        displayToast("SUBJECT ADDED");
         return all4;
 
     }
@@ -110,6 +114,7 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
 
         String dbname1 = subname.getText().toString();
         all5=dbname1;
+        displayToast("SUBJECT ADDED");
         return all5;
 
     }
@@ -118,8 +123,12 @@ public class substud extends AppCompatActivity implements View.OnClickListener {
 
         String dbname1 = subname.getText().toString();
         all6=dbname1;
+        displayToast("SUBJECT ADDED");
         return all6;
 
+    }
+    private void displayToast(String message){
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
 
