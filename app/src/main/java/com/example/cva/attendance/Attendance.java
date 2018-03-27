@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,11 +20,13 @@ public class Attendance extends AppCompatActivity {
     private Button btn;
     private Button btnpro;
     private Studdb dbd;
+    private TextView tt;
     private CheckBox checkBoxes[] = new CheckBox[15];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attend);
+        tt=(TextView)findViewById(R.id.textView);
         dbd = new Studdb(this);
         btn = (Button) findViewById(R.id.btncc);
         Button btnExport=(Button)findViewById(R.id.btnexport);
@@ -105,7 +108,7 @@ AddData();
 
                                     db.execSQL("INSERT INTO "+Tablename+" VALUES('"+currentTime+"','"+rol+"','Present');");
 
-
+tt.setText("INSERTED");
                                 }
                                 else
                                 {

@@ -33,33 +33,33 @@ public class Atdb  extends SQLiteOpenHelper  {
     public String STUD_TABLE6 = value6;
 
 
-    public static final String COLUMN_DATE1= "date";
-    public static final String COLUMN_DATE2= "date";
-    public static final String COLUMN_ID1 = "roll";
-    public static final String COLUMN_ID2 = "roll";
+    public static final String COLUMN_DATE1= "Date";
+    public static final String COLUMN_DATE2= "Date";
+    public static final String COLUMN_ID1 = "Name";
+    public static final String COLUMN_ID2 = "Name";
     public static final String COLUMN_STAT1 = "status";
     public static final String COLUMN_STAT2 = "status";
 
-    public static final String COLUMN_DATE3= "date";
-    public static final String COLUMN_DATE4= "date";
-    public static final String COLUMN_ID3 = "roll";
-    public static final String COLUMN_ID4 = "roll";
+    public static final String COLUMN_DATE3= "Date";
+    public static final String COLUMN_DATE4= "Date";
+    public static final String COLUMN_ID3 = "Name";
+    public static final String COLUMN_ID4 = "Name";
     public static final String COLUMN_STAT3 = "status";
     public static final String COLUMN_STAT4 = "status";
 
-    public static final String COLUMN_DATE5= "date";
-    public static final String COLUMN_DATE6= "date";
-    public static final String COLUMN_ID5 = "roll";
-    public static final String COLUMN_ID6 = "roll";
+    public static final String COLUMN_DATE5= "Date";
+    public static final String COLUMN_DATE6= "Date";
+    public static final String COLUMN_ID5 = "Name";
+    public static final String COLUMN_ID6 = "Name";
     public static final String COLUMN_STAT5 = "status";
     public static final String COLUMN_STAT6 = "status";
 
     public final String CREATE_TABLE_STUD1 = "CREATE TABLE " + STUD_TABLE1 + "("
-            + COLUMN_DATE1 + "TEXT,"
+            + COLUMN_DATE1 + " TEXT,"
             + COLUMN_ID1 + " TEXT,"
             + COLUMN_STAT1 + " TEXT);";
     public final String CREATE_TABLE_STUD2 = "CREATE TABLE " + STUD_TABLE2 + "("
-            + COLUMN_DATE2 + "TEXT,"
+            + COLUMN_DATE2 + " TEXT,"
             + COLUMN_ID2 + " TEXT,"
             + COLUMN_STAT2 + " TEXT);";
     public final String CREATE_TABLE_STUD3 = "CREATE TABLE " + STUD_TABLE3 + "("
