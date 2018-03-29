@@ -25,35 +25,7 @@
         android:orientation="horizontal"
         >
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textColor="@color/white"
-            android:layout_below="@+id/etdbname"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/buttonshape"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="ADD SUBJECT 1" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textColor="@color/white"
-            android:layout_alignLeft="@+id/button1"
-            android:layout_alignStart="@+id/button1"
-            android:layout_below="@+id/button1"
-            android:background="@drawable/buttonshape"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="ADD SUBJECT 2" />
 
 
         <EditText
@@ -71,65 +43,14 @@
             android:inputType="textPersonName"
            />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textColor="@color/white"
-            android:layout_alignLeft="@+id/button2"
-            android:layout_alignStart="@+id/button2"
-            android:layout_below="@+id/button2"
-            android:background="@drawable/buttonshape"
-            android:shadowColor="@android:color/transparent"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="ADD SUBJECT 3" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textColor="@color/white"
-            android:layout_alignLeft="@+id/button3"
-            android:layout_alignStart="@+id/button3"
-            android:layout_below="@+id/button3"
-            android:background="@drawable/buttonshape"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="ADD SUBJECT 4" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textColor="@color/white"
-            android:layout_alignLeft="@+id/button4"
-            android:layout_alignStart="@+id/button4"
-            android:layout_below="@+id/button4"
-            android:background="@drawable/buttonshape"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="ADD SUBJECT 5" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:textColor="@color/white"
-            android:layout_alignLeft="@+id/button5"
-            android:layout_alignStart="@+id/button5"
-            android:layout_below="@+id/button5"
-            android:background="@drawable/buttonshape"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="5"
-            android:text="ADD SUBJECT 6" />
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etdbname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp"
+            app:srcCompat="@android:drawable/ic_input_add" />
 
 
     </RelativeLayout>

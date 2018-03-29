@@ -28,26 +28,22 @@ public class Attendance extends AppCompatActivity {
         setContentView(R.layout.activity_attend);
         tt=(TextView)findViewById(R.id.textView);
         dbd = new Studdb(this);
-        btn = (Button) findViewById(R.id.btncc);
-        Button btnExport=(Button)findViewById(R.id.btnexport);
-        btnpro=(Button)findViewById(R.id.buttonp);
-        checkBoxes[0] = (CheckBox) findViewById(R.id.cb1);
-        checkBoxes[1] = (CheckBox) findViewById(R.id.cb2);
-        checkBoxes[2] = (CheckBox)findViewById(R.id.cb3);
-        checkBoxes[3] = (CheckBox)findViewById(R.id.cb4);
-        checkBoxes[4] = (CheckBox)findViewById(R.id.cb5);
-        checkBoxes[5] = (CheckBox)findViewById(R.id.cb6);
-        checkBoxes[6] = (CheckBox)findViewById(R.id.cb7);
-        checkBoxes[7] = (CheckBox)findViewById(R.id.cb8);
-        checkBoxes[8] = (CheckBox)findViewById(R.id.cb9);
-        checkBoxes[9] = (CheckBox)findViewById(R.id.cb10);
-        checkBoxes[10] = (CheckBox)findViewById(R.id.cb11);
-        checkBoxes[11] = (CheckBox)findViewById(R.id.cb12);
-        checkBoxes[12] = (CheckBox)findViewById(R.id.cb13);
-        checkBoxes[13] = (CheckBox)findViewById(R.id.cb14);
-
-
-
+        btn = findViewById(R.id.btncc);
+        btnpro=findViewById(R.id.buttonp);
+        checkBoxes[0] = findViewById(R.id.cb1);
+        checkBoxes[1] = findViewById(R.id.cb2);
+        checkBoxes[2] = findViewById(R.id.cb3);
+        checkBoxes[3] = findViewById(R.id.cb4);
+        checkBoxes[4] = findViewById(R.id.cb5);
+        checkBoxes[5] = findViewById(R.id.cb6);
+        checkBoxes[6] = findViewById(R.id.cb7);
+        checkBoxes[7] = findViewById(R.id.cb8);
+        checkBoxes[8] = findViewById(R.id.cb9);
+        checkBoxes[9] = findViewById(R.id.cb10);
+        checkBoxes[10] = findViewById(R.id.cb11);
+        checkBoxes[11] = findViewById(R.id.cb12);
+        checkBoxes[12] = findViewById(R.id.cb13);
+        checkBoxes[13] = findViewById(R.id.cb14);
 
         viewAll();
 AddData();
@@ -108,13 +104,13 @@ AddData();
 
                                     db.execSQL("INSERT INTO "+Tablename+" VALUES('"+currentTime+"','"+rol+"','Present');");
 
-tt.setText("INSERTED");
+                                    displayToast("Inserted");
                                 }
                                 else
                                 {
                                     String rol= (String) checkBoxes[i].getText();
                                     db.execSQL("INSERT INTO "+Tablename+" VALUES('"+currentTime+"','"+rol+"','Absent');");
-
+                                    displayToast("Inserted");
 
                                 }
                             }
@@ -128,5 +124,8 @@ tt.setText("INSERTED");
                     }
                 }
         );
+    }
+    private void displayToast(String message){
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 }

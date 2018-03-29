@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/opt"
+    android:background="@drawable/logi"
     tools:context="com.example.cva.attendance.RegisterActivity"
     android:orientation="vertical"
     android:paddingTop="56dp"

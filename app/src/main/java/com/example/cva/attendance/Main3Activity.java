@@ -14,12 +14,10 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        ImageButton imgb;
-        ImageButton imgb2;
 
-        imgb = (ImageButton) findViewById(R.id.imageButton8);
-        imgb2 = (ImageButton) findViewById(R.id.imageButton3);
-        ImageButton imgb3 = (ImageButton) findViewById(R.id.imageButton4);
+        ImageButton imgb = findViewById(R.id.imageButton8);
+        ImageButton imgb2 =  findViewById(R.id.imageButton3);
+        ImageButton imgb3 =  findViewById(R.id.imageButton4);
 
         imgb.setOnClickListener(this);
         imgb2.setOnClickListener(this);

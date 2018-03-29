@@ -1,7 +1,9 @@
 package com.example.cva.attendance;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class exportsele extends AppCompatActivity implements View.OnClickListener {
-    private Atdb dbb;
+
     private Button btn;
     private TextView textView;
     private Button buttons[] = new Button[6];
@@ -20,7 +22,7 @@ public class exportsele extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exportsele);
-        dbb = new Atdb(this);
+
         btn = (Button) findViewById(R.id.btnnn);
 
         buttons[0] = (Button)findViewById(R.id.button1);
@@ -46,16 +48,18 @@ public class exportsele extends AppCompatActivity implements View.OnClickListene
                     @Override
                     public void onClick(View v) {
                         ArrayList<String> arrTblNames = new ArrayList<String>();
-                        Cursor c = dbb.getAllData();
+                        SQLiteDatabase db;
+                        db=openOrCreateDatabase("1A.db", Context.MODE_PRIVATE,null);
+                        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
                         if (c.moveToFirst()) {
                             while (!c.isAfterLast()) {
                                 arrTblNames.add( c.getString( c.getColumnIndex("name")) );
                                 c.moveToNext();
 
                             }
-                        }
+                        }db.close();
                         String [] myary = arrTblNames.toArray(new String[arrTblNames.size()]);
-                        for(int i=0;i<6;i++){
+                        for(int i=0;i<myary.length-1;i++){
                             buttons[i].setVisibility(View.VISIBLE);
 
                             buttons[i].setText(myary[i+1]);
@@ -112,7 +116,9 @@ public class exportsele extends AppCompatActivity implements View.OnClickListene
 
 
     ArrayList<String> oh(){
-        Cursor c = dbb.getAllData();
+        SQLiteDatabase db;
+        db=openOrCreateDatabase("1A.db", Context.MODE_PRIVATE,null);
+        Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
         ArrayList<String> arrTblNames = new ArrayList<String>();
         if (c.moveToFirst()) {
             while (!c.isAfterLast()) {
@@ -120,7 +126,7 @@ public class exportsele extends AppCompatActivity implements View.OnClickListene
                 c.moveToNext();
 
             }
-        }
+        }db.close();
         return arrTblNames;
     }
 }

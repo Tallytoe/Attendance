@@ -16,7 +16,6 @@ import java.io.File;
 import java.io.FileWriter;
 
 public class Export extends AppCompatActivity {
-    private Atdb db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
