@@ -32,7 +32,7 @@ public class substud extends AppCompatActivity  {
                 displayToast("Inserted");
             }
 
-        });db.close();
+        });
 
     }
     private void displayToast(String message){
