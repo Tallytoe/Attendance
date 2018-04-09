@@ -29,7 +29,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageButton3"
-        android:background="@drawable/sav" />
+        android:background="@drawable/sav"
+
+        />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -38,5 +40,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageButton8"
-        android:background="@drawable/st" />
+        android:background="@drawable/st"
+
+        />
 </RelativeLayout>

@@ -2,6 +2,7 @@ package com.example.cva.attendance;
 
 import android.app.ActionBar;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
@@ -20,20 +21,20 @@ public class Export extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_export);
-        Button btnexport = (Button) findViewById(R.id.btnexport); //my button with ID btnexport
-        final TextView infotext=(TextView)findViewById(R.id.info);
+        Button btnexport = (Button) findViewById(R.id.btnexport);
+        Button bper = findViewById(R.id.per);
+        final TextView infotext = (TextView) findViewById(R.id.info);
         btnexport.setOnClickListener(new View.OnClickListener() {
-
 
 
             @Override
             public void onClick(View v) {
                 SQLiteDatabase sqldb;
-                sqldb = openOrCreateDatabase("1A.db",Context.MODE_PRIVATE, null);
+                sqldb = openOrCreateDatabase("1A.db", Context.MODE_PRIVATE, null);
                 Cursor c = null;
                 String Tablename = getIntent().getStringExtra("datt");
                 try {
-                    c = sqldb.rawQuery("select * from "+Tablename+"", null);
+                    c = sqldb.rawQuery("select * from " + Tablename + "", null);
                     int rowcount = 0;
                     int colcount = 0;
                     File sdCardDir = Environment.getExternalStorageDirectory();
@@ -88,6 +89,18 @@ public class Export extends AppCompatActivity {
             }
         });
 
+        bper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View vp) {
+
+                String Tablename = getIntent().getStringExtra("datt");
+                Intent ii=new Intent(Export.this,percentage.class);
+               ii.putExtra("pp",Tablename);
+               startActivity(ii);
+            }
+
+        });
 
     }
 }
+

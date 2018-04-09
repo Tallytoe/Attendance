@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,14 +48,22 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void register(){
-        String email = etEmail.getText().toString();
+        String email = etEmail.getText().toString().trim();
         String pass = etPass.getText().toString();
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         if(email.isEmpty() && pass.isEmpty()){
             displayToast("Username/password field empty");
-        }else{
+        }
+        else if(email.matches(emailPattern) && pass.length() > 0)
+        {
             db.addUser(email,pass);
             displayToast("User registered");
             finish();
+        }
+        else
+            {
+
+                displayToast("Inappropriate E-mail ID");
         }
     }
 

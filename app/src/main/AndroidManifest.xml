@@ -27,7 +27,8 @@
         <activity android:name=".Stud" />
         <activity android:name=".Attendance" />
         <activity android:name=".Export" />
-        <activity android:name=".exportsele"></activity>
+        <activity android:name=".exportsele" />
+        <activity android:name=".percentage"></activity>
     </application>
 
 </manifest>
