@@ -10,12 +10,9 @@
         android:id="@+id/etp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/bp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="59dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -26,9 +23,9 @@
         android:id="@+id/bp"
         android:layout_width="270dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/etp"
+        android:layout_alignTop="@+id/tvp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
@@ -49,4 +46,39 @@
         android:textSize="30dp"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="303dp" />
+
+    <EditText
+        android:id="@+id/fda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etp"
+        android:layout_alignStart="@+id/etp"
+        android:layout_below="@+id/etp"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="Date"
+        />
+
+    <EditText
+        android:id="@+id/toda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fda"
+        android:layout_alignStart="@+id/fda"
+        android:layout_below="@+id/fda"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="Date"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fda"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="TO" />
+
 </RelativeLayout>

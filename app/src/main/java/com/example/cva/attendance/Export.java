@@ -38,7 +38,7 @@ public class Export extends AppCompatActivity {
                     int rowcount = 0;
                     int colcount = 0;
                     File sdCardDir = Environment.getExternalStorageDirectory();
-                    String filename = "l.csv";
+                    String filename = "a.csv";
                     // the name of the file to export with
                     File saveFile = new File(sdCardDir, filename);
                     FileWriter fw = new FileWriter(saveFile);

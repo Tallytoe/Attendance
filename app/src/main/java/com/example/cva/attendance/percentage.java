@@ -19,6 +19,8 @@ public class percentage extends AppCompatActivity {
         final EditText pet = (EditText) findViewById(R.id.etp);
         Button pbu = (Button) findViewById(R.id.bp);
        final TextView ptext = (TextView) findViewById(R.id.tvp);
+       final EditText todat=(EditText)findViewById(R.id.toda);
+        final EditText fodat=(EditText)findViewById(R.id.fda);
 
 
         pbu.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +32,7 @@ public class percentage extends AppCompatActivity {
                 sqldb = openOrCreateDatabase("1A.db", Context.MODE_PRIVATE, null);
                 Cursor c = null;
                 String Tablen = getIntent().getStringExtra("pp");
-                c= sqldb.rawQuery("SELECT * FROM " + Tablen + " WHERE Name='"+pet.getText()+"'",null);
+                c= sqldb.rawQuery("SELECT * FROM " + Tablen + " WHERE Name='"+pet.getText()+"' AND Date BETWEEN '"+fodat.getText()+"' AND '"+todat.getText()+"'  ",null);
                 String[] array = new String[c.getCount()];
                 int i=0;
                 float count=0;

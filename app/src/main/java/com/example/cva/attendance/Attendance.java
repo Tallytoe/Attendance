@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -92,7 +94,10 @@ AddData();
 
                             String [] maa = gett().toArray(new String[gett().size()]);
 
-                            Date currentTime = Calendar.getInstance().getTime();
+
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                            Calendar c = Calendar.getInstance();
+                            String date = sdf.format(c.getTime());
                             String Tablename = getIntent().getStringExtra("datt");
 
 
@@ -102,14 +107,14 @@ AddData();
                                     String rol= (String) checkBoxes[i].getText();
 
 
-                                    db.execSQL("INSERT INTO "+Tablename+" VALUES('"+currentTime+"','"+rol+"','Present');");
+                                    db.execSQL("INSERT INTO "+Tablename+" VALUES('"+date+"','"+rol+"','Present');");
 
                                     displayToast("Inserted");
                                 }
                                 else
                                 {
                                     String rol= (String) checkBoxes[i].getText();
-                                    db.execSQL("INSERT INTO "+Tablename+" VALUES('"+currentTime+"','"+rol+"','Absent');");
+                                    db.execSQL("INSERT INTO "+Tablename+" VALUES('"+date+"','"+rol+"','Absent');");
                                     displayToast("Inserted");
 
                                 }
